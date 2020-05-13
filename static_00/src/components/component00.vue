@@ -1,6 +1,8 @@
 <template>
   <div class="comp00">
-    <p :style="styleObject00">{{ msg }}</p>
+    <div :key="graphic()">
+      <p :style="styleObject00">{{ msg }}</p>
+    </div>
   </div>
 </template>
 
@@ -14,6 +16,22 @@ export default {
       styleObject00: {
         textAlign: "center",
         fontWeight: "thin"
+      },
+      graphic() {
+        const script = p5 => {
+          p5.setup = () => {
+            let canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight);
+            canvas.position(0, 0);
+            canvas.style("z-index", -1);
+            canvas.style("display", "block");
+            p5.background(0, 0, 0);
+          };
+          p5.windowResized = () => {
+            p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+          };
+        };
+        const P5 = require("p5");
+        new P5(script);
       }
     };
   }
