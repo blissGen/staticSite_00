@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 import component00 from "@/components/component00.vue";
 
 export default {

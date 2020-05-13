@@ -10,7 +10,7 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -18,15 +18,17 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
+  text-align: left;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  text-decoration: none;
+  font-weight: thin;
+  color: #ff3ae5;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #00bcff;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="comp00">
-    <h1>{{ msg }}</h1>
+    <p :style="styleObject00">{{ msg }}</p>
   </div>
 </template>
 
@@ -9,7 +9,12 @@ export default {
   name: "component00",
   data: function() {
     return {
-      msg: "sweet"
+      msg: "sweet",
+
+      styleObject00: {
+        textAlign: "center",
+        fontWeight: "thin"
+      }
     };
   }
 };
