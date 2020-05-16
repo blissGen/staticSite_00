@@ -1,13 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link :to="{ name: '00' }">00</router-link> |
-      <router-link to="{ name: '01' }">01</router-link> |
-      <router-link to="{ name: '02' }">02</router-link>
+    <div id="nav" @click="refreshPage">
+      <router-link :to="{ name: '00' }">00/ </router-link> 
+      <router-link :to="{ name: '01' }">01/ </router-link> 
+      <router-link :to="{ name: '02' }">02/ </router-link>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      refreshPage() {
+        setTimeout(function() {
+          window.location.reload();
+        }, 250);
+      }
+    };
+  }
+};
+</script>
 
 <style>
 #app {

@@ -15,7 +15,8 @@ export default {
 
       styleObject00: {
         textAlign: "center",
-        fontWeight: "thin"
+        fontWeight: "thin",
+        color: "#FFFFFF"
       },
       graphic() {
         const script = p5 => {
@@ -24,7 +25,7 @@ export default {
             canvas.position(0, 0);
             canvas.style("z-index", -1);
             canvas.style("display", "block");
-            p5.background(0, 0, 0);
+            p5.background(0);
           };
           p5.windowResized = () => {
             p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
